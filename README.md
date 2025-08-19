@@ -49,10 +49,10 @@ Then visit http://localhost:3000
 
 ## 🧩 What I’d ship next (if I had more time)
 
-1. **Virtualized list** once we load 100+ items per page or switch to infinite scroll (`react-window`).
-2. **Prefetch on hover** for detail pages using React Query to make transitions feel instant.
-3. **Offline cache** using `workbox` or service worker, so favorites view works offline with images.
-4. **Episode details** panel (code-split), with parallel queries.
+1. **Better Responsive UI**, for small screens is acceptable but could be optimised.
+2. **Optimise code** to make it more readable & loosely coupled.
+3. **Offline cache** so the view works offline with images.
+4. **Episode details** & get more info of the episodes in detailed view.
 
 ## 📁 File Structure
 
