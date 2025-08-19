@@ -1,10 +1,10 @@
 'use client';
 
 import { useQuery } from '@tanstack/react-query';
-import { fetchCharacterById } from '../lib/rickmorty';
+import { fetchCharacterById } from '../../../lib/rickmorty';
 import { useParams, useRouter } from 'next/navigation';
-import FavoriteButton from '../components/FavoriteButton';
-import { getNoteFor, setNoteFor } from '../lib/notes';
+import FavoriteButton from '../../../components/FavoriteButton';
+import { getNoteFor, setNoteFor } from '../../../lib/notes';
 import { useEffect, useState } from 'react';
 
 export default function CharacterDetailPage() {
