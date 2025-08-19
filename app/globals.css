@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0b0b0b;
-  --fg: #fafafa;
+  /* --bg: #0b0b0b; */
+  /* --fg: #fafafa; */
 }
 
 html,
@@ -18,4 +18,10 @@ body {
 
 a {
   @apply underline-offset-2;
+}
+
+.hover\:bg-gray-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity, 1));
+    color: white;
 }
