@@ -19,10 +19,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <FavoritesProvider>
               <header className="sticky top-0 z-10 border-b bg-white/80 px-4 py-3 backdrop-blur dark:bg-neutral-950/80">
                 <div className="mx-auto flex max-w-4xl items-center justify-between">
-                  <Link href="/" className="font-semibold">Resource Explorer</Link>
+                  <Link href="/" className="forceWhiteText font-semibold">Resource Explorer</Link>
                   <nav className="flex items-center gap-3 text-sm">
-                    <Link href="/?favorites=1" className="rounded border px-2 py-1 hover:bg-gray-100 dark:hover:bg-neutral-800">★ Favorites</Link>
-                    <Link href="/" className="rounded border px-2 py-1 hover:bg-gray-100 dark:hover:bg-neutral-800">All</Link>
+                    <Link href="/?favorites=1" className="forceWhiteText rounded border px-2 py-1 hover:bg-gray-100 dark:hover:bg-neutral-800">★ Favorites</Link>
+                    <Link href="/" className="forceWhiteText rounded border px-2 py-1 hover:bg-gray-100 dark:hover:bg-neutral-800">All</Link>
                   </nav>
                 </div>
               </header>
