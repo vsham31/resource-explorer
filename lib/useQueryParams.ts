@@ -15,7 +15,7 @@ export function useQueryParams() {
       else sp.set(k, String(v));
     });
     router.replace(`${pathname}?${sp.toString()}`, { scroll: opts.scroll ?? false });
-  }, [router, pathname, searchParams]);
+  }, [router, pathname]);
 
   const get = useCallback((key: string, fallback = '') => {
     return searchParams?.get(key) ?? fallback;
