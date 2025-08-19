@@ -10,7 +10,7 @@ export default function SearchInput() {
   const debounced = useDebouncedValue(value, 400);
 
   useEffect(() => {
-    setParams({ q: debounced || null, page: 1 });
+    setParams({ q: debounced || null});
   }, [debounced, setParams]);
 
   useEffect(() => {
