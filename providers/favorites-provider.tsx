@@ -26,21 +26,24 @@ export function FavoritesProvider({ children }: { children: React.ReactNode }) {
     }
   }, []);
 
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    localStorage.setItem(KEY, JSON.stringify(Array.from(favorites)));
-  }, [favorites]);
-
+  // Only update localStorage when user changes favorites
   const toggle = useCallback((id: number) => {
     setFavorites(prev => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id); else next.add(id);
+      localStorage.setItem(KEY, JSON.stringify(Array.from(next)));
       return next;
     });
   }, []);
 
+  const clearAll = useCallback(() => {
+    setFavorites(() => {
+      localStorage.setItem(KEY, JSON.stringify([]));
+      return new Set();
+    });
+  }, []);
+
   const isFavorite = useCallback((id: number) => favorites.has(id), [favorites]);
-  const clearAll = useCallback(() => setFavorites(new Set()), []);
 
   const value = useMemo(() => ({ favorites, toggle, isFavorite, clearAll }), [favorites, toggle, isFavorite, clearAll]);
   return <FavoritesContext.Provider value={value}>{children}</FavoritesContext.Provider>;
